@@ -7,13 +7,30 @@ import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/s
 import { AppSidebar } from "@/components/app-sidebar";
 import { Separator } from "@/components/ui/separator";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
-export const Assistant = () => {
+export const AssistantPage = () => {
   const runtime = useChatRuntime({
     api: "/api/chat",
   });
+  const router = useRouter();
+  
+    useEffect(() => {
+      const user = localStorage.getItem("ai-user");
+      if (!user) {
+        router.push("/login"); // redirect if not logged in
+      }
+      <button
+      className="text-sm text-red-500 hover:underline"
+      >
+        Logout
+      </button>
+    }, []);
 
   return (
+    <>
+
     <AssistantRuntimeProvider runtime={runtime}>
       <SidebarProvider>
         <AppSidebar />
@@ -24,14 +41,14 @@ export const Assistant = () => {
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem className="hidden md:block">
-                  <BreadcrumbLink href="#">
+                  <BreadcrumbLink href="/assistant">
                     Manoj&apos;s AI
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="hidden md:block" />
                 <BreadcrumbItem>
                   <BreadcrumbPage>
-                    Starter Template
+                    Assistant
                   </BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
@@ -41,5 +58,8 @@ export const Assistant = () => {
         </SidebarInset>
       </SidebarProvider>
     </AssistantRuntimeProvider>
+    </>
   );
 };
+
+export default AssistantPage;
