@@ -14,7 +14,10 @@ import {
 import { ThreadList } from "./assistant-ui/thread-list"
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  // we can change the slidebar from here 
   return (
+    <>
+
     <Sidebar {...props}>
       <SidebarHeader>
         <SidebarMenu>
@@ -25,7 +28,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                     <MessagesSquare className="size-4" />
                   </div>
                   <div className="flex flex-col gap-0.5 leading-none">
-                    <span className="font-semibold">assistant-ui</span>
+                    <span className="font-semibold">🧠 Manoj&apos;s AI</span>
                   </div>
                 </Link>
               </SidebarMenuButton>
@@ -42,7 +45,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
          
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
-              <Link href="https://github.com/assistant-ui/assistant-ui" target="_blank">
+              <Link href="https://github.com/manojtarad65/Ai-Clone" target="_blank">
                 <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
                   <Github className="size-4" />
                 </div>
@@ -57,5 +60,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </SidebarMenu>
       </SidebarFooter>
     </Sidebar>
+    </>
   )
 }
