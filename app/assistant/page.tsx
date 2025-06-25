@@ -38,7 +38,7 @@ export const AssistantPage = () => {
               <BreadcrumbList>
                 <BreadcrumbItem className="hidden md:block">
                   <BreadcrumbLink href="/assistant">
-                    Manoj&apos;s AI
+                    Nowhere AI
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="hidden md:block" />

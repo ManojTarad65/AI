@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Github, Linkedin, MessagesSquare, Twitter } from "lucide-react"
+import { Github, Linkedin, MessagesSquare,  } from "lucide-react"
 import Link from "next/link"
 import {
   Sidebar,
@@ -29,7 +29,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                     <MessagesSquare className="size-4" />
                   </div>
                   <div className="flex flex-col gap-0.5 leading-none">
-                    <span className="font-semibold">🧠 Manoj&apos;s AI</span>
+                    <span className="font-semibold">🧠 Nowhere AI</span>
                   </div>
                 </Link>
               </SidebarMenuButton>
