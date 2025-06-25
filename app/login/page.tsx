@@ -6,6 +6,7 @@ import { signIn } from "next-auth/react";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function LoginPage() {
   return (
@@ -37,7 +38,7 @@ export default function LoginPage() {
             animate={{ scale: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
             >
-            <img src="/logo.png" alt="Logo" className="w-24 h-24 rounded-full mb-6 shadow-lg" />
+            <Image src="/logo.png" alt="Logo" className="w-24 h-24 rounded-full mb-6 shadow-lg" width={100} height={100} />
             </motion.div>          
 
           <h2 className="text-4xl font-bold mb-4">Welcome to Nowhere AI</h2>
