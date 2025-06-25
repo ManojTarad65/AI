@@ -22,7 +22,7 @@ export const AssistantPage = () => {
         router.push("/login"); // redirect if not logged in
       }
 
-    }, []);
+    }, [router]);
 
   return (
     <>
