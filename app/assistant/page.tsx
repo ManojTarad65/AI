@@ -21,11 +21,7 @@ export const AssistantPage = () => {
       if (!user) {
         router.push("/login"); // redirect if not logged in
       }
-      <button
-      className="text-sm text-red-500 hover:underline"
-      >
-        Logout
-      </button>
+
     }, []);
 
   return (

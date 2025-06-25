@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Github, MessagesSquare } from "lucide-react"
+import { Github, Linkedin, MessagesSquare, Twitter } from "lucide-react"
 import Link from "next/link"
 import {
   Sidebar,
@@ -12,6 +12,7 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar"
 import { ThreadList } from "./assistant-ui/thread-list"
+import { FaTwitterSquare } from "react-icons/fa"
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   // we can change the slidebar from here 
@@ -45,15 +46,24 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
          
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
-              <Link href="https://github.com/manojtarad65/Ai-Clone" target="_blank">
-                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                  <Github className="size-4" />
-                </div>
-                <div className="flex flex-col gap-0.5 leading-none">
-                  <span className="font-semibold">GitHub</span>
-                  <span className="">View Source</span>
+              <div className="flex items-center gap-16 ">
+              <Link href="https://www.linkedin.com/in/manoj-tarad-0b779625a" target="_blank">
+                <div className="">
+                  <Linkedin className="size-4" />
                 </div>
               </Link>
+
+              <Link href="https://github.com/manojtarad65/Ai" target="_blank">
+                <div className="">
+                  <Github className="size-4" />
+                </div>
+              </Link>
+              <Link href="https://x.com/manojtarad1" target="_blank">
+                <div className="">
+                  <FaTwitterSquare className="size-4" />
+                </div>
+              </Link>
+              </div>
             </SidebarMenuButton>
             
           </SidebarMenuItem>

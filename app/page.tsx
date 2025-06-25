@@ -1,19 +1,16 @@
-// import { Assistant } from "./assistant";
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Features from "@/components/Feature";
+import HeroSection from "@/components/home/Hero";
+import FeaturesSection from "@/components/home/Feature";
 
+import Footer from "@/components/shared/Footer";
+import AboutSection from "./about/page";
 
 export default function Home() {
   return (
-    <>
-    <div className="py-20 px-6 bg-[var(--background)] text-[var(--foreground)]">
-      <Navbar />
-      <Hero />
-      <Features />
-
-      {/* <Assistant /> */}
-    </div>
-    </>
+    <main className="min-h-screen bg-gradient-to-br from-[#0f0c29] via-[#110e30] to-[#575764] text-white overflow-x-hidden">
+      <HeroSection />
+      <FeaturesSection />
+      <AboutSection />
+      <Footer />
+    </main>
   );
 }
