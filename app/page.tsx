@@ -62,7 +62,7 @@ export default function Home() {
 
 
             {/* Get Started Button */}
-            <Link href="/login">
+            <Link href="/assistant">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

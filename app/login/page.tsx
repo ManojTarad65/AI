@@ -74,13 +74,17 @@ export default function LoginPage() {
 
           <div className="flex gap-4 mt-4">
             <button
-              onClick={() => signIn("google")}
+              onClick={() => signIn("google", {
+                callbackUrl: "/assistant",
+              })}
               className="flex items-center gap-2 px-4 py-2 bg-white text-black rounded-md shadow hover:scale-105 transition-transform"
             >
               <FcGoogle size={20} /> Google
             </button>
             <button
-              onClick={() => signIn("github")}
+              onClick={() => signIn("github", {
+                callbackUrl: "/assistant",
+              })}
               className="flex items-center gap-2 px-4 py-2 bg-black text-white rounded-md shadow hover:scale-105 transition-transform"
             >
               <FaGithub size={20} /> GitHub
