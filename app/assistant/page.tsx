@@ -10,7 +10,7 @@ import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbP
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
-export const AssistantPage = () => {
+export default function AssistantPage() {
   const runtime = useChatRuntime({
     api: "/api/chat",
   });
@@ -56,6 +56,4 @@ export const AssistantPage = () => {
     </AssistantRuntimeProvider>
     </>
   );
-};
-
-export default AssistantPage;
+}
